@@ -1,5 +1,7 @@
 # @susisu/react-use-source-sink
 
+[![Build Status](https://travis-ci.com/susisu/react-use-source-sink.svg?branch=master)](https://travis-ci.com/susisu/react-use-source-sink)
+
 ``` shell
 npm i @susisu/react-use-source-sink
 # or
