@@ -1,3 +1,6 @@
+## 0.1.2 (2019-11-23)
+- Fix document
+
 ## 0.1.1 (2019-11-23)
 - Just updating package description and nothing has been changed
 
