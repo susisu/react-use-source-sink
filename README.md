@@ -12,7 +12,7 @@ yarn add @susisu/react-use-source-sink
 
 ``` tsx
 import React, { useEffect } from "react";
-import { useSourceSink } from ".";
+import { useSourceSink } from "@susisu/react-use-source-sink";
 
 const Hello: React.FC = () => {
   const [source, sink] = useSourceSink<HTMLElement | null>(null);
