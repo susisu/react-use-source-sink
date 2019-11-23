@@ -19,8 +19,8 @@ describe("useSourceSink", () => {
     const [source1, sink1, ref1] = t.result.current;
     t.rerender();
     const [source2, sink2, ref2] = t.result.current;
-    expect(source1).toEqual(source2);
-    expect(sink1).toEqual(sink2);
-    expect(ref1).toEqual(ref2);
+    expect(source1).toBe(source2);
+    expect(sink1).toBe(sink2);
+    expect(ref1).toBe(ref2);
   });
 });
