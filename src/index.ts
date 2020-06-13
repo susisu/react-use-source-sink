@@ -1,4 +1,4 @@
-import { useRef, useCallback } from "react";
+import { useRef } from "react";
 
 export type Souce<T> = () => T;
 
@@ -9,7 +9,7 @@ export type Sink<T> = (val: T) => void;
  */
 export function useSourceSink<T>(val: T): [Souce<T>, Sink<T>, React.MutableRefObject<T>] {
   const ref = useRef(val);
-  const source = useCallback((): T => ref.current, []);
-  const sink = useCallback((val: T): void => { ref.current = val; }, []);
-  return [source, sink, ref];
+  const sourceRef = useRef((): T => ref.current);
+  const sinkRef = useRef((val: T): void => { ref.current = val; });
+  return [sourceRef.current, sinkRef.current, ref];
 }
