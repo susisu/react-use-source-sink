@@ -1,4 +1,4 @@
-## 0.1.3 (yyyy-mm-dd)
+## 0.1.3 (2020-06-13)
 - Use `useRef` instead of `useCallback` to retain references to source / sink functions
 
 ## 0.1.2 (2019-11-23)
