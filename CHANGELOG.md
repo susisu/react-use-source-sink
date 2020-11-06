@@ -1,3 +1,6 @@
+## 0.1.4 (2020-11-06)
+- Support React 17
+
 ## 0.1.3 (2020-06-13)
 - Use `useRef` instead of `useCallback` to retain references to source / sink functions
 
