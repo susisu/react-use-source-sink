@@ -1,6 +1,6 @@
 # @susisu/react-use-source-sink
 
-[![Build Status](https://travis-ci.com/susisu/react-use-source-sink.svg?branch=master)](https://travis-ci.com/susisu/react-use-source-sink)
+[![CI](https://github.com/susisu/react-use-source-sink/workflows/CI/badge.svg)](https://github.com/susisu/react-use-source-sink/actions?query=workflow%3ACI)
 
 ``` shell
 npm i @susisu/react-use-source-sink
