@@ -1,3 +1,6 @@
+## 0.1.5 (2021-01-04)
+- Fix typo (rename `type Souce` to `type Source`)
+
 ## 0.1.4 (2020-11-06)
 - Support React 17
 
