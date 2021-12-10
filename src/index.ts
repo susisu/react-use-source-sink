@@ -10,6 +10,8 @@ export type Sink<T> = (val: T) => void;
 export function useSourceSink<T>(val: T): [Source<T>, Sink<T>, MutableRefObject<T>] {
   const ref = useRef(val);
   const sourceRef = useRef((): T => ref.current);
-  const sinkRef = useRef((val: T): void => { ref.current = val; });
+  const sinkRef = useRef((val: T): void => {
+    ref.current = val;
+  });
   return [sourceRef.current, sinkRef.current, ref];
 }
