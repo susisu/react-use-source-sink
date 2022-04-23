@@ -1,3 +1,7 @@
+## 0.1.6 (2022-04-23)
+- Support React 18
+- Include source files in distribution (for source maps)
+
 ## 0.1.5 (2021-01-04)
 - Fix typo (rename `type Souce` to `type Source`)
 
