@@ -3,7 +3,7 @@
 module.exports = {
   roots: ["./src"],
   testMatch: ["**/*.{test,spec}.{ts,tsx}"],
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
   collectCoverage: true,
   collectCoverageFrom: ["./src/**/*.{ts,tsx}", "!./src/**/*.{test,spec}.{ts,tsx}"],
   coverageDirectory: "coverage",
