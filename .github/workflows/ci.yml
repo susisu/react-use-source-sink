@@ -4,23 +4,28 @@ on:
   pull_request:
   release:
     types:
-    - created
+      - created
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version:
-        - '12'
-        - '14'
-        - '16'
+          - '18'
+          - '20'
+          - '21'
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install --frozen-lockfile
-    - run: yarn lint
-    - run: yarn test
-    - run: yarn build
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm format:check
+      - run: pnpm lint:check
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build

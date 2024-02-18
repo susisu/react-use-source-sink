@@ -3,9 +3,12 @@
 [![CI](https://github.com/susisu/react-use-source-sink/workflows/CI/badge.svg)](https://github.com/susisu/react-use-source-sink/actions?query=workflow%3ACI)
 
 ``` shell
+# npm
 npm i @susisu/react-use-source-sink
-# or
+# yarn
 yarn add @susisu/react-use-source-sink
+# pnpm
+pnpm add @susisu/react-use-source-sink
 ```
 
 ## Usage
