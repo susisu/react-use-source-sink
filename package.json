@@ -17,12 +17,13 @@
     "format:check": "prettier --check '*.js' src",
     "lint": "eslint --fix '*.js' src",
     "lint:check": "eslint '*.js' src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "jest",
     "build": "tsc --build tsconfig.build.json",
     "clean": "run-s clean:build clean:rm",
     "clean:build": "tsc --build tsconfig.build.json --clean",
     "clean:rm": "rimraf lib",
-    "prepublishOnly": "run-s clean format:check lint:check test build"
+    "prepublishOnly": "run-s clean format:check lint:check typecheck test build"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
