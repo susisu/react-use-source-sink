@@ -5,7 +5,21 @@
   "repository": "https://github.com/susisu/react-use-source-sink.git",
   "author": "Susisu <susisu2413@yahoo.co.jp>",
   "license": "MIT",
+  "type": "module",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "require": {
+        "default": "./lib/index.cjs",
+        "types": "./lib/index.d.cts"
+      }
+    }
+  },
   "files": [
     "lib",
     "src",
@@ -20,11 +34,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run --coverage",
     "test:dev": "vitest dev --coverage.enabled --coverage.reporter=text",
-    "build": "tsc --build tsconfig.build.json",
-    "clean": "run-s clean:build clean:rm",
-    "clean:build": "tsc --build tsconfig.build.json --clean",
-    "clean:rm": "rimraf lib",
-    "prepublishOnly": "run-s clean format:check lint:check typecheck test build"
+    "build": "tsup",
+    "prepublishOnly": "run-s format:check lint:check typecheck test build"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
@@ -43,7 +54,7 @@
     "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rimraf": "^5.0.5",
+    "tsup": "^8.0.2",
     "typescript": "~5.3.3",
     "vitest": "^1.3.0"
   }
