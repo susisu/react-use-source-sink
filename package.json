@@ -1,6 +1,6 @@
 {
   "name": "@susisu/react-use-source-sink",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Creates a pair of source and sink",
   "repository": "https://github.com/susisu/react-use-source-sink.git",
   "author": "Susisu <susisu2413@yahoo.co.jp>",
