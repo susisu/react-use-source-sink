@@ -26,7 +26,7 @@ module.exports = {
       files: ["*.{test,spec}.{ts,tsx}"],
       extends: ["plugin:jest/recommended", "plugin:jest-formatting/recommended"],
       env: {
-        "node": true,
+        node: true,
         "jest/globals": true,
       },
       rules: {
